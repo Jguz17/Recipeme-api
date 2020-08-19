@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create(username: 'test', password: '123')
+User.create(username: 'apple', password: '232')
+User.create(username: 'john', password: '777')
+
+Recipe.create(name: 'applesauce', ingredients: ["apples", "sugar", "water"], source: 'some person')
+Recipe.create(name: 'papaya smoothie', ingredients: ["papayas", "milk", "sugar"], source: 'maybe martha stewart')
+Recipe.create(name: "rice", ingredients: ["rice", "water"], source: 'maybe snoop')
+
+List.create(user_id: 2, recipe_id: 1)
+List.create(user_id: 3, recipe_id: 3)
+List.create(user_id: 2, recipe_id: 2)
