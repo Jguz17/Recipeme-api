@@ -10,9 +10,9 @@ class Api::V1::RecipesController < ApplicationController
     def create
         name = params[:name]
         ingredients = params[:ingredients]
-        description = params[:description]
+        source = params[:source]
 
-        recipe = Recipe.create(name: name, ingredients: ingredients, description: description)
+        recipe = Recipe.create(name: name, ingredients: ingredients, source: source)
         
         render json: recipe
     end
@@ -27,9 +27,8 @@ class Api::V1::RecipesController < ApplicationController
 
         name = params[:name]
         ingredients = params[:ingredients]
-        description = params[:description]
 
-        recipe = Recipe.update(name: name, ingredients: ingredients, description: description)
+        recipe = Recipe.update(name: name, ingredients: ingredients, source: source)
         
         render json: recipe
     end
