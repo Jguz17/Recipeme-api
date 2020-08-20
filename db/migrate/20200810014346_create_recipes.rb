@@ -4,6 +4,7 @@ class CreateRecipes < ActiveRecord::Migration[6.0]
       t.string :name
       t.text :ingredients, array: true, default: []
       t.string :source
+      t.string :image
 
       t.timestamps
     end
