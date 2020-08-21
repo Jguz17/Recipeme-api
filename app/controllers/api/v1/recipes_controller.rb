@@ -12,8 +12,9 @@ class Api::V1::RecipesController < ApplicationController
         ingredients = params[:ingredients]
         source = params[:source]
         image = params[:image]
-
-        recipe = Recipe.create(name: name, ingredients: ingredients, source: source, image: image)
+        user_id = params[:user_id]
+        
+        recipe = Recipe.create(name: name, ingredients: ingredients, source: source, image: image, user_id: user_id)
         
         render json: recipe
     end
